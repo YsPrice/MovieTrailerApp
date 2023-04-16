@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { darkTheme, lightTheme } from "./components/Theme"
+import { useState, useEffect } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import Home from './pages/Home';
+import Footer from './components/Footer';
+
+
+
+
+const Container = styled.div`
+  flex: 1;
+  background-color: black;
+  height: 270vh;
+  color: ${({ theme }) => theme.text};
+  font-size: 14px;
+  top: 0;
+  width: 100%;
+
+
+  
+`;
 function App() {
+
+  
+  
+  // takes poster_path as second part
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+     <>
+       <Container style={{}}>
+ <Home style={{}} />
+
+ </Container>
+
+ </>
+
   );
 }
 
